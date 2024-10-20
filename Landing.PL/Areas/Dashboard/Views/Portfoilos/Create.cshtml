@@ -1,0 +1,28 @@
+﻿@model PortfoiloFormVM
+
+@section Header {
+	Portfoilos
+}
+
+
+<div class="col-md-12">
+	<div class="card card-primary">
+		<div class="card-header">
+			<h3 class="card-title">Create</h3>
+		</div>
+
+		@* by default : enctype ="application/x-www-form-urlencoded"  => هاد ما بقبل الملفات*@
+		<form asp-controller="Portfoilos" asp-action="Create" >
+			<div class="card-body">
+				<div class="form-group">
+					<label asp-for="Name">Name</label>
+					<input asp-for="Name" class="form-control" placeholder="Enter Service Name">
+				</div>
+			</div>
+
+			<div class="card-footer">
+				<button type="submit" class="btn btn-primary" fdprocessedid="pvthkg">Create</button>
+			</div>
+		</form>
+	</div>
+</div>
